@@ -31,7 +31,7 @@ public class TestBase {
 			@Optional ("chrome") String browser, 
 			
 			@Optional ("false") boolean isLambdaTest, 
-			@Optional ("true") boolean isHeadless, ITestResult result) {
+			@Optional ("false") boolean isHeadless, ITestResult result) {
 
 		this.isLambdaTest = isLambdaTest;
 
@@ -58,16 +58,16 @@ public class TestBase {
 		return homePage;
 	}
 
-	@AfterMethod(description = "Tear down the browser")
-
-	public void tearDown() {
-
-		if (isLambdaTest) {
-
-			LambdaTestUtility.quiteSession();// quit or close the browser session on LT
-		} else {
-			homePage.quit();// local
-		}
-
-	}
+//	@AfterMethod(description = "Tear down the browser")
+//
+//	public void tearDown() {
+//
+//		if (isLambdaTest) {
+//
+//			LambdaTestUtility.quiteSession();// quit or close the browser session on LT
+//		} else {
+//			homePage.quit();// local
+//		}
+//
+//	}
 }
