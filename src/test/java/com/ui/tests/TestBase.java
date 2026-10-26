@@ -58,16 +58,5 @@ public class TestBase {
 		return homePage;
 	}
 
-//	@AfterMethod(description = "Tear down the browser")
-//
-//	public void tearDown() {
-//
-//		if (isLambdaTest) {
-//
-//			LambdaTestUtility.quiteSession();// quit or close the browser session on LT
-//		} else {
-//			homePage.quit();// local
-//		}
-//
-//	}
+
 }
